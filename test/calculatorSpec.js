@@ -1,10 +1,13 @@
 'use strict';
+var util = require('util');
+var logger = require('../lib/logger');
 
-let calculator = require('../lib/calculator');
+var calculator = require('../lib/calculator');
 
-describe('calculator', () => {
+describe('calculator', function() {
 
-  it('should add numbers', () => {
-    expect(calculator.add(2, 2)).to.equal(4);
-  });
+    it('should add numbers', function (done) {
+        expect(calculator.add(2, 2)).toEqual(4);
+        done();
+    })
 });
