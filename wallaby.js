@@ -33,6 +33,9 @@ module.exports = function () {
                 };
                 winston.remove(winston.transports.Console);
                 winston.add(winston.transports.ConsoleLogger);
+                winston.add = winston.remove = function () {
+
+                };
             }
 
         },
